@@ -1,6 +1,8 @@
 // named import
 import { pageLoad } from "./pageLoad";
 import { menu } from "./menu";
+import { aboutUs } from "./aboutUs";
+import './styles.css';
 
 pageLoad();
 
@@ -18,5 +20,5 @@ menuBtn.addEventListener('click', () => {
 });
 
 aboutBtn.addEventListener('click', () => {
-
+    aboutUs();
 });
