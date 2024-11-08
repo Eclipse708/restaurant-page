@@ -8,9 +8,9 @@ const pageLoad = function() {
     const h1 = document.createElement('h1');
     const img = document.createElement('img');
     const p = document.createElement('p');
-    h1.textContent = "Welcome to Delightful Bites";
+    h1.textContent = "Welcome to Brew Haven";
     img.src = restaurantBanner;
-    p.textContent = "At Delightful Bites, we serve a blend of traditional flavors and modern dishes that will tantalize your taste buds. Our chefs are committed to using fresh, high-quality ingredients in every dish. Whether you're here for a quick lunch or a leisurely dinner, we promise a delightful experience every time.";
+    p.textContent = "Crafted with passion, served with warmth. Savor every sip at Brew Haven.";
     div.appendChild(h1);
     div.appendChild(img);
     div.appendChild(p);

@@ -5,30 +5,40 @@ const aboutUs = function() {
     div.textContent = "";
     const h1 = document.createElement('h1');
     const aboutUsInfo = [
-        {heading:"Person 1", title:'Title 1', phone:'12345678', email:'test@email.com'},
-        {heading:"Person 2", title:'Title 2', phone:'12345678', email:'test2@email.com'},
-        {heading:"Person 3", title:'Title 3', phone:'12345678', email:'test3@email.com'},
+        {heading: "James Bennett", title: "Founder", phone: "555-987-1234", email: "james@brewhaven.com"},
+        {heading: "Sofia Martinez", title: "Operations Manager", phone: "555-654-4321", email: "sofia@brewhaven.com"},
+        {heading: "Liam O'Connor", title: "Lead Chef", phone: "555-321-8765", email: "liam@brewhaven.com"},
     ];
 
     h1.textContent = 'About Us';
     div.appendChild(h1);
 
+    const aboutUsContainer = document.createElement('div');
+    aboutUsContainer.classList.add('about-container');
+
     for (let i = 0; i < aboutUsInfo.length; i++) {
         const item = aboutUsInfo[i];
+        
+        const card = document.createElement('div');
+        card.classList.add('about-card');
+
         const name = document.createElement('p');
         const title = document.createElement('p');
         const phone = document.createElement('p');
         const email = document.createElement('p');
 
         name.textContent = item.heading;
-        title.textContent = item.title;
-        phone.textContent = item.phone;
-        email.textContent = item.email;
+        title.textContent = `Title: ${item.title}`;
+        phone.textContent = `Phone: ${item.phone}`;
+        email.textContent = `Email: ${item.email}`;
 
-        div.appendChild(name);
-        div.appendChild(title);
-        div.appendChild(phone);
-        div.appendChild(email);
+        card.appendChild(name);
+        card.appendChild(title);
+        card.appendChild(phone);
+        card.appendChild(email);
+
+        aboutUsContainer.appendChild(card);
     }
 
+    div.appendChild(aboutUsContainer);
 };
